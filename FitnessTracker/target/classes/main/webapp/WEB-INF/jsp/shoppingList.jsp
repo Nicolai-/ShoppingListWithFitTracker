@@ -12,7 +12,7 @@
 </head>
 <body>
 	<h1>List of Shopping List items</h1>
-	<form:form commandName="item">
+	<form:form method="POST" action="shoppingList.html">
 		<table border="3">
 			<tr>
 				<th>Id</th>
@@ -29,10 +29,9 @@
 
 					<td align="center"><input type="checkbox" name="bought"
 						value="${i.id}"
-						<c:if test="${i.bought == true}" > checked="${i.bought}"</c:if> /></td>
+						<c:if test="${i.bought == true}">checked="${i.bought}"</c:if> /></td>
 
-
-					<td align="center"><input type="checkbox" name="delete"
+					<td align="center"><input type="checkbox" name="deleted"
 						value="${i.id}" /></td>
 				</tr>
 			</c:forEach> </u1>

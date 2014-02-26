@@ -12,7 +12,11 @@ public interface ItemDAO {
 
 	public void createItem(String itemName, int price);
 	
+	public void deleteItem(int itemId);
+	
 	public Item getItem(int itemId);
+	
+	public void resetAllBought();
 	
 	public void setItemBought(int itemId);
 	

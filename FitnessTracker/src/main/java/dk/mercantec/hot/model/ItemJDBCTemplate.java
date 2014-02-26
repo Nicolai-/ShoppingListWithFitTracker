@@ -58,6 +58,16 @@ public class ItemJDBCTemplate implements ItemDAO {
 		List<Item> items = jdbcTemplateObject.query(SQL, new ItemMapper());
 		return items;
 	}
+
+	public void deleteItem(int itemId) {
+		String SQL = "DELETE FROM item WHERE id= ?";
+		jdbcTemplateObject.update(SQL, itemId);
+	}
+
+	public void resetAllBought() {
+		String SQL = "UPDATE item SET is_bought=NULL";
+		jdbcTemplateObject.update(SQL);
+	}
 	
 	
 }
